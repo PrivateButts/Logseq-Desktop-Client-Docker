@@ -1,0 +1,10 @@
+version: '3'
+services:
+  logseq:
+    build:
+      context: logseq
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - logseq:/var/logseq
