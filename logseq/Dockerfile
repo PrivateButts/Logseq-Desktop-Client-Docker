@@ -12,5 +12,7 @@ RUN su - builder -c "cd /tmp/yay-build/yay && makepkg -si --noconfirm"
 RUN rm -rf /tmp/yay-build
 
 RUN su - builder -c "yay -S --noconfirm gtk3 logseq-desktop-bin"
+# RUN chown -R root /opt/logseq-desktop/chrome-sandbox
+# RUN chmod 4755 /opt/logseq-desktop/chrome-sandbox
 
-COPY /root /
+COPY /root/defaults /defaults
